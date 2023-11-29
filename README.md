@@ -14,6 +14,23 @@ For testing it, you must
 
 You should be able to view the image from within ros2 (e.g. rqt_image_view) and control the car by sending commands to `/command` topic. The command is a pair throttle/steering angle.
 
+3) you can then control the simulation from within ROS driving_unity package :
+
+	ros2 run driving_unity keyboard_teleop
+
+and record the images and commands with :
+
+	ros2 run driving_unity recorder
+
+the last will dump the commands and frames in compressed npz files. The chunks all contain, by default, 500 frames/commands. For example :
+
+	import numpy
+	truc = numpy.load('chunk-00000.npz')
+	import matplotlib.pyplot as plt
+	img = truc['frames'][-1]
+	plt.imshow(img[:,:,::-1])
+	plt.show()
+
 # If you were to do it from scratch
 
 Open the project

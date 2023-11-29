@@ -908,6 +908,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 323467259}
+  - component: {fileID: 323467260}
+  - component: {fileID: 323467261}
   m_Layer: 0
   m_Name: ROSConnector
   m_TagString: Untagged
@@ -930,6 +932,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &323467260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323467258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7f5dbfe4a58265e81630b1fb60f614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remote_control: {fileID: 1695732595}
+--- !u!114 &323467261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323467258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1de97cd96ccf8a486819e2c1cf10cc98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImageCamera: {fileID: 1373814402}
+  FrameId: Camera
+  resolutionWidth: 640
+  resolutionHeight: 480
+  qualityLevel: 50
+  topicName: image_raw/compressed
 --- !u!1001 &328239857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3217,6 +3250,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 11400020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_Topspeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400020, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_SpeedType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 20000011124301124, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: m_TargetDisplay
       value: 1
@@ -3229,9 +3270,17 @@ PrefabInstance:
       propertyPath: m_TargetDisplay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 81000010209231204, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114000011847512630, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
       propertyPath: circuit
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 124000013174603028, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -4203,6 +4252,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbde394c601d1b84e80e186d8c17df91, type: 3}
+--- !u!20 &1373814402 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20000011327949428, guid: 0fb4610dba67fc24cb2a6674fb155fc1, type: 3}
+  m_PrefabInstance: {fileID: 1050280511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1377198030
 PrefabInstance:
   m_ObjectHideFlags: 0
