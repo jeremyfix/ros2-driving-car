@@ -407,6 +407,10 @@ namespace UnityStandardAssets.Vehicles.Car
         }
 
 
+        public Vector3 getLocalVelocity(){
+            return transform.InverseTransformDirection(m_Rigidbody.velocity);
+        }
+        
 		//Changed the WriteSamplesToDisk to a IEnumerator method that plays back recording along with percent status from UISystem script 
 		//instead of showing frozen screen until all data is recorded
 		public IEnumerator WriteSamplesToDisk()

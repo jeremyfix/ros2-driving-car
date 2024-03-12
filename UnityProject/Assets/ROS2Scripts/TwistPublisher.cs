@@ -50,7 +50,10 @@ namespace RosUtilities.Communication
         }
         private void UpdateMessage()
         {
-            message.twist.linear.x = m_Car.CurrentSpeed / 2.23693629f; // MPH -> m/s.
+            Vector3 velocity = m_Car.getLocalVelocity();
+            //message.twist.linear.x = m_Car.CurrentSpeed / 2.23693629f; // MPH -> m/s.
+            message.twist.linear.x = velocity.z; // m/s.
+
 
             ros.Publish(topicName, message);
         }
